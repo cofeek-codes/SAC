@@ -1,6 +1,7 @@
 package clicker
 
 import (
+	"cofeek-codes/SAC/mouse"
 	"log"
 	"time"
 )
@@ -46,6 +47,7 @@ func (c *Clicker) Exit() {
 func (c *Clicker) run() {
 	for c.IsActive {
 		log.Println("Click")
+		mouse.CenterCursor()
 		time.Sleep(time.Duration(c.Delay) * time.Millisecond)
 	}
 }
